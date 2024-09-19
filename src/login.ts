@@ -4,6 +4,6 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const callbackUrl = url.searchParams.get('success_call_back');
 
-  return Response.redirect(callbackUrl as string, 302);
+  return new Response('Hello DC and Lucas');
 }
   

@@ -134,7 +134,7 @@ function _GET() {
             callbackUrl = url.searchParams.get("success_call_back");
             return [
                 2,
-                Response.redirect(callbackUrl, 302)
+                new Response("Hello DC and Lucas")
             ];
         });
     });
