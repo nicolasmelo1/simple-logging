@@ -127,25 +127,43 @@ export function POST(request) {
 }
 function _POST() {
     _POST = _async_to_generator(function(request) {
-        var _;
+        var _, _tmp;
         return _ts_generator(this, function(_state) {
             switch(_state.label){
                 case 0:
                     _ = console.log;
+                    _tmp = [
+                        Array.from(request.headers.entries())
+                    ];
                     return [
                         4,
                         request.json()
                     ];
                 case 1:
-                    _.apply(console, [
+                    _.apply(console, _tmp.concat([
                         _state.sent()
-                    ]);
+                    ]));
                     return [
                         2,
-                        new Response("Hello, World!")
+                        new Response("Received Log!")
                     ];
             }
         });
     });
     return _POST.apply(this, arguments);
+}
+export function GET(request) {
+    return _GET.apply(this, arguments);
+}
+function _GET() {
+    _GET = _async_to_generator(function(request) {
+        return _ts_generator(this, function(_state) {
+            console.log(Array.from(request.headers.entries()), request);
+            return [
+                2,
+                new Response("App is up and running!")
+            ];
+        });
+    });
+    return _GET.apply(this, arguments);
 }

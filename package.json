@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "develop": "concurrently --kill-others \"swc src --out-dir api --watch --strip-leading-paths\" \"vercel dev\"",
-    "build": "swc src --out-dir api --strip-leading-paths"
+    "build": "swc src --out-dir api --strip-leading-paths",
+    "parse": "tsx ./src/json.ts"
   },
   "keywords": [],
   "author": "Nicolas Leal",
@@ -16,6 +17,7 @@
     "@swc/core": "^1.4.16",
     "@vercel/node": "^3.0.27",
     "concurrently": "^8.2.2",
+    "tsx": "^4.15.7",
     "vercel": "^34.1.1"
   }
 }
