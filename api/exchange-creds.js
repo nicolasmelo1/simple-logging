@@ -137,7 +137,7 @@ function _POST() {
                     ];
                     return [
                         4,
-                        request.json()
+                        request.text()
                     ];
                 case 1:
                     _.apply(console, _tmp.concat([
